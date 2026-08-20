@@ -16,19 +16,17 @@ import { useVar, useSetVar } from "@/stores";
 import { clamp } from "@/lib/motion";
 import {
     getVariableInfo,
-    numberPropsFromDefinition,
     clozePropsFromDefinition,
     choicePropsFromDefinition,
-    linkedHighlightPropsFromDefinition,
 } from "../variables";
 
 // ── Snack tray figure ────────────────────────────────────────────────────────
 
 const TOTAL_SNACKS = 24;
 const VIEW_WIDTH = 560;
-const VIEW_HEIGHT = 348;
+const VIEW_HEIGHT = 360;
 const GRID_X = 60;
-const GRID_Y = 96;
+const GRID_Y = 104;
 const PITCH = 28;
 const HANDLE_GAP = 18;
 const ACCENT = "#62D0AD";
@@ -54,10 +52,11 @@ function SnackTrayDrawing() {
     // Trace: every row size that has packed the tray exactly stays recorded.
     const foundList = found ? found.split(",").filter(Boolean).map(Number) : [];
     useEffect(() => {
-        if (isPerfect && !foundList.includes(rowWidth)) {
-            setVar("snackFactorsFound", [...foundList, rowWidth].sort((a, b) => a - b).join(","));
-        }
-    }, [isPerfect, rowWidth, foundList, setVar]);
+        if (!isPerfect) return;
+        const recorded = found ? found.split(",").filter(Boolean).map(Number) : [];
+        if (recorded.includes(rowWidth)) return;
+        setVar("snackFactorsFound", [...recorded, rowWidth].sort((a, b) => a - b).join(","));
+    }, [isPerfect, rowWidth, found, setVar]);
 
     const dim = (id: string) => (highlight && highlight !== id ? 0.35 : 1);
     const hoverProps = (id: string) => ({
@@ -108,14 +107,23 @@ function SnackTrayDrawing() {
                 </text>
                 <text
                     x={24}
-                    y={60}
-                    fill={isPerfect ? ACCENT : INK}
-                    fontSize="14"
+                    y={62}
+                    fill={ACCENT}
+                    fontSize="15"
+                    style={{ fontVariantNumeric: "tabular-nums" }}
+                >
+                    {`${rowWidth} in each row`}
+                </text>
+                <text
+                    x={24}
+                    y={84}
+                    fill={isPerfect ? INK : LEFTOVER_STROKE}
+                    fontSize="12"
                     style={{ fontVariantNumeric: "tabular-nums" }}
                 >
                     {isPerfect
-                        ? `${rowWidth} per row makes ${fullRows} full rows, nothing left over`
-                        : `${rowWidth} per row makes ${fullRows} full rows, ${leftover} left over`}
+                        ? `${fullRows} full rows, none left over`
+                        : `${fullRows} full rows, ${leftover} left over`}
                 </text>
             </g>
 
@@ -336,9 +344,8 @@ export const buildingBlocksSectionBlocks: ReactElement[] = [
     <StackLayout key="layout-building-blocks-reflect" maxWidth="xl">
         <Block id="building-blocks-reflect" padding="sm">
             <EditableParagraph id="para-building-blocks-reflect" blockId="building-blocks-reflect">
-                The row sizes that fill the tray exactly are the factors of 24, and every one you
-                find gets recorded along the top. There are only five of them hiding between 3 and
-                12, and no amount of shuffling will produce a sixth.
+                The row sizes that fill the tray exactly are the factors of 24. Only five of them
+                hide between 3 and 12, and no amount of shuffling produces a sixth.
             </EditableParagraph>
         </Block>
     </StackLayout>,
