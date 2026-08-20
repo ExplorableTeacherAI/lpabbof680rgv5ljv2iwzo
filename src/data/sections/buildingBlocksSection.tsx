@@ -352,28 +352,7 @@ export const buildingBlocksSectionBlocks: ReactElement[] = [
 
     <StackLayout key="layout-building-blocks-question-naming" maxWidth="xl">
         <Block id="building-blocks-question-naming" padding="md">
-            <EditableParagraph id="para-building-blocks-question-naming" blockId="building-blocks-question-naming">
-                On a different tray, 30 snacks sit in rows of 6 with nothing left over, which makes
-                6 a{" "}
-                <InlineFeedback
-                    varName="answerRowSizeIsCalled"
-                    correctValue="factor"
-                    position="terminal"
-                    successMessage="— yes, a factor divides into a number and lands exactly on it, which is what a full row does"
-                    failureMessage="— careful, that is the other one"
-                    hint="A multiple is what you reach by counting past the number, not what fits neatly inside it"
-                    reviewBlockId="building-blocks-visual"
-                    reviewLabel="Look at the tray again"
-                >
-                    <InlineClozeChoice
-                        varName="answerRowSizeIsCalled"
-                        correctAnswer="factor"
-                        options={["factor", "multiple"]}
-                        {...choicePropsFromDefinition(getVariableInfo('answerRowSizeIsCalled'))}
-                    />
-                </InlineFeedback>{" "}
-                of 30.
-            </EditableParagraph>
+            <EditableParagraph id="para-building-blocks-question-naming" blockId="building-blocks-question-naming">On a different tray, 30 snacks sit in rows of 6 with nothing left over, which makes 6 a <InlineFeedback varName={"answerRowSizeIsCalled"} correctValue={"factor"} caseSensitive={false} position={"terminal"} successMessage={"— yes, a factor divides into a number and lands exactly on it, which is what a full row does"} failureMessage={"— careful, that is the other one"} hint={"A multiple is what you reach by counting past the number, not what fits neatly inside it"} reviewBlockId={"building-blocks-visual"} reviewLabel={"Look at the tray again"}><InlineClozeChoice varName={"answerRowSizeIsCalled"} correctAnswer={"factor"} options={["factor", "multiple"]} placeholder={"???"} color={"#5E35B1"} bgColor={"rgba(59, 130, 246, 0.35)"} id={"choice-1787192180443-oompo"} /></InlineFeedback> of 30.</EditableParagraph>
         </Block>
     </StackLayout>,
 
