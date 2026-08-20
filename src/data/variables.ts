@@ -85,6 +85,47 @@ export const variableDefinitions: Record<string, VariableDefinition> = {
     // ADD YOUR VARIABLES HERE
     // ========================================
 
+    // ─────────────────────────────────────────
+    // SECTION: What a Number Is Made Of
+    // ─────────────────────────────────────────
+    snackRowWidth: {
+        defaultValue: 5,
+        type: 'number',
+        label: 'Snacks per row',
+        description: 'How many of the 24 snacks sit in each row of the tray',
+        min: 3,
+        max: 12,
+        step: 1,
+        color: '#62D0AD',
+    },
+    snackTrayHighlight: {
+        defaultValue: '',
+        type: 'linkedHighlight',
+        label: 'Snack tray highlight',
+        description: 'Which part of the snack tray is highlighted from the prose',
+        color: '#F7B23B',
+        bgColor: 'rgba(247, 178, 59, 0.2)',
+    },
+    answerRowSizeIsCalled: {
+        defaultValue: '',
+        type: 'select',
+        label: 'Row size is called',
+        description: 'Student answer: a row size that divides exactly is a factor',
+        placeholder: '???',
+        correctAnswer: 'factor',
+        options: ['factor', 'multiple'],
+        color: '#8E90F5',
+    },
+    answerRowSizeBetweenSevenAndEleven: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Row size between 7 and 11',
+        description: 'Student answer: the only row size between 7 and 11 that packs 24 exactly',
+        placeholder: '???',
+        correctAnswer: '8',
+        color: '#8E90F5',
+    },
+
     // Uncomment and modify these examples for your lesson:
 
     /*
