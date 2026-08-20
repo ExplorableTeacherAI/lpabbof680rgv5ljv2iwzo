@@ -84,6 +84,18 @@ initializeVariableColors(variableDefinitions);
  * check your .env file and set VITE_SHOW_EXAMPLES=false.
  */
 
+import { orientSectionBlocks } from "./sections/orientSection";
+import { buildingBlocksSectionBlocks } from "./sections/buildingBlocksSection";
+import { highestCommonFactorSectionBlocks } from "./sections/highestCommonFactorSection";
+import { lowestCommonMultipleSectionBlocks } from "./sections/lowestCommonMultipleSection";
+import { whichOneSectionBlocks } from "./sections/whichOneSection";
+import { closeSectionBlocks } from "./sections/closeSection";
+
 export const blocks: ReactElement[] = [
-    // Start adding your blocks here!
+    ...orientSectionBlocks,
+    ...buildingBlocksSectionBlocks,
+    ...highestCommonFactorSectionBlocks,
+    ...lowestCommonMultipleSectionBlocks,
+    ...whichOneSectionBlocks,
+    ...closeSectionBlocks,
 ];
