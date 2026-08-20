@@ -17,7 +17,6 @@ import { clamp } from "@/lib/motion";
 import {
     getVariableInfo,
     clozePropsFromDefinition,
-    choicePropsFromDefinition,
 } from "../variables";
 
 // ── Snack tray figure ────────────────────────────────────────────────────────

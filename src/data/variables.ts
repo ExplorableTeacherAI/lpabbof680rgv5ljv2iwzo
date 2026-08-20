@@ -156,6 +156,47 @@ export const variableDefinitions: Record<string, VariableDefinition> = {
         color: '#8E90F5',
     },
 
+    // ─────────────────────────────────────────
+    // SECTION: The First Time They Line Up Again
+    // ─────────────────────────────────────────
+    refillTime: {
+        defaultValue: 40,
+        type: 'number',
+        label: 'Minutes on the clock',
+        description: 'How far the clock has been wound forward along the refill timeline',
+        unit: 'min',
+        min: 0,
+        max: 120,
+        step: 1,
+        color: '#62D0AD',
+    },
+    refillHighlight: {
+        defaultValue: '',
+        type: 'linkedHighlight',
+        label: 'Refill lane highlight',
+        description: 'Which refill lane is highlighted from the prose',
+        color: '#F7B23B',
+        bgColor: 'rgba(247, 178, 59, 0.2)',
+    },
+    answerFirstMeetingSixEight: {
+        defaultValue: '',
+        type: 'text',
+        label: 'First meeting of 6 and 8',
+        description: 'Student answer: when 6-minute and 8-minute timers first refill together',
+        placeholder: '???',
+        correctAnswer: '24',
+        color: '#8E90F5',
+    },
+    answerFirstMeetingTenFifteen: {
+        defaultValue: '',
+        type: 'text',
+        label: 'First meeting of 10 and 15',
+        description: 'Student answer: when 10-minute and 15-minute timers first refill together',
+        placeholder: '???',
+        correctAnswer: '30',
+        color: '#8E90F5',
+    },
+
     answerRowSizeBetweenSevenAndEleven: {
         defaultValue: '',
         type: 'text',
