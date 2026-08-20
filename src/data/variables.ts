@@ -197,6 +197,59 @@ export const variableDefinitions: Record<string, VariableDefinition> = {
         color: '#8E90F5',
     },
 
+    // ─────────────────────────────────────────
+    // SECTION: Which One Does This Question Need?
+    // ─────────────────────────────────────────
+    scenarioIndex: {
+        defaultValue: 0,
+        type: 'number',
+        label: 'Scenario',
+        description: 'Which snack pack scenario card is currently on the table',
+        min: 0,
+        max: 3,
+        step: 1,
+        color: '#62D0AD',
+    },
+    scenarioVerdict: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Scenario verdict',
+        description: 'Whether the current scenario card landed in the right tray',
+    },
+    scenarioChoice: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Scenario choice',
+        description: 'Which tray the student dropped the current scenario card into',
+    },
+    whichOneHighlight: {
+        defaultValue: '',
+        type: 'linkedHighlight',
+        label: 'Sorting tray highlight',
+        description: 'Which sorting tray is highlighted from the prose',
+        color: '#F7B23B',
+        bgColor: 'rgba(247, 178, 59, 0.2)',
+    },
+    answerHamperQuestionType: {
+        defaultValue: '',
+        type: 'select',
+        label: 'Hamper question type',
+        description: 'Student answer: which of HCF or LCM the hamper question needs',
+        placeholder: '???',
+        correctAnswer: 'highest common factor',
+        options: ['highest common factor', 'lowest common multiple'],
+        color: '#8E90F5',
+    },
+    answerFoodVanDays: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Food van days',
+        description: 'Student answer: when 12-day and 18-day food vans next arrive together',
+        placeholder: '???',
+        correctAnswer: '36',
+        color: '#8E90F5',
+    },
+
     answerRowSizeBetweenSevenAndEleven: {
         defaultValue: '',
         type: 'text',
