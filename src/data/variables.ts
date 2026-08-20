@@ -116,6 +116,46 @@ export const variableDefinitions: Record<string, VariableDefinition> = {
         options: ['factor', 'multiple'],
         color: '#8E90F5',
     },
+    // ─────────────────────────────────────────
+    // SECTION: The Biggest Pack They Can Both Fill
+    // ─────────────────────────────────────────
+    partyBagCount: {
+        defaultValue: 5,
+        type: 'number',
+        label: 'Party bags',
+        description: 'How many identical party bags the chocolates and sweets are dealt into',
+        min: 3,
+        max: 12,
+        step: 1,
+        color: '#62D0AD',
+    },
+    partyBagHighlight: {
+        defaultValue: '',
+        type: 'linkedHighlight',
+        label: 'Party bag highlight',
+        description: 'Which part of the party bag figure is highlighted from the prose',
+        color: '#F7B23B',
+        bgColor: 'rgba(247, 178, 59, 0.2)',
+    },
+    answerBagsEighteenAndThirty: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Bags for 18 and 30',
+        description: 'Student answer: the most identical bags from 18 balloons and 30 badges',
+        placeholder: '???',
+        correctAnswer: '6',
+        color: '#8E90F5',
+    },
+    answerBiggerCleanPack: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Bigger clean pack',
+        description: 'Student answer: the largest clean bag count for 20 pens and 30 rulers',
+        placeholder: '???',
+        correctAnswer: '10',
+        color: '#8E90F5',
+    },
+
     answerRowSizeBetweenSevenAndEleven: {
         defaultValue: '',
         type: 'text',
