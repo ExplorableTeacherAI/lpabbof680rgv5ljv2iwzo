@@ -308,7 +308,7 @@ export const lowestCommonMultipleSectionBlocks: ReactElement[] = [
     <StackLayout key="layout-lowest-common-multiple-reflect" maxWidth="xl">
         <Block id="lowest-common-multiple-reflect" padding="sm">
             <EditableParagraph id="para-lowest-common-multiple-reflect" blockId="lowest-common-multiple-reflect">
-                They meet at 72 minutes, not at 864. Multiplying the two timers together always
+                They meet at 72 minutes, not at 864! Multiplying the two timers together always
                 gets you a moment they share, but it counts everything the two have in common
                 twice, so it lands far later than it needs to.
             </EditableParagraph>
