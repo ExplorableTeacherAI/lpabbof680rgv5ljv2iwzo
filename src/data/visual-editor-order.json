@@ -16,8 +16,8 @@
     "highest-common-factor-reflect",
     "highest-common-factor-question-transfer",
     "highest-common-factor-question-bigger-pack",
-    "lowest-common-multiple-setup",
     "lowest-common-multiple-heading",
+    "lowest-common-multiple-setup",
     "lowest-common-multiple-visual",
     "lowest-common-multiple-reflect",
     "lowest-common-multiple-question-six-eight",
@@ -212,20 +212,15 @@
     },
     {
       "id": "layout-lowest-common-multiple-heading",
-      "type": "split",
+      "type": "stack",
       "columns": [
         [
+          "lowest-common-multiple-heading",
           "lowest-common-multiple-setup"
-        ],
-        [
-          "lowest-common-multiple-heading"
         ]
       ],
       "props": {
-        "ratio": "1:1",
-        "gap": "lg",
-        "reverse": false,
-        "align": "start"
+        "maxWidth": "xl"
       }
     },
     {
