@@ -14,12 +14,7 @@ export const orientSectionBlocks: ReactElement[] = [
 
     <StackLayout key="layout-orient-opening" maxWidth="xl">
         <Block id="orient-opening" padding="sm">
-            <EditableParagraph id="para-orient-opening" blockId="orient-opening">
-                Take any two numbers, say 24 and 36. There is a biggest number that divides
-                neatly into both of them, and there is a smallest number that both of them
-                divide neatly into. Those two answers have names: the highest common factor
-                and the lowest common multiple.
-            </EditableParagraph>
+            <EditableParagraph id="para-orient-opening" blockId="orient-opening">Take any two numbers, say 24 and 36. There is a biggest number that divides neatly into both of them, and there is a smallest number that both of them divide neatly into. Those two answers have names: the highest common factor and the lowest common multiple. /</EditableParagraph>
         </Block>
     </StackLayout>,
 
