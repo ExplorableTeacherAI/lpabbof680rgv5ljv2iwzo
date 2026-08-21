@@ -25,7 +25,7 @@ export const orientSectionBlocks: ReactElement[] = [
 
     <StackLayout key="layout-orient-promise" maxWidth="xl">
         <Block id="orient-promise" padding="sm">
-            <EditableParagraph id="para-orient-promise" blockId="orient-promise">By the end you will be able to find both of them for any pair of numbers, using nothing but the pieces those numbers are built from. You do not need to know what a prime is to start. We begin by pulling a number apart and seeing what falls out. /</EditableParagraph>
+            <EditableParagraph id="para-orient-promise" blockId="orient-promise">By the end you will be able to find both of them for any pair of numbers, using nothing but the pieces those numbers are built from. You do not need to know what a prime is to start. We begin by pulling a number apart and seeing what falls out.</EditableParagraph>
         </Block>
     </StackLayout>,
 ];
