@@ -2,7 +2,7 @@
   "name": "mathvibe",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://c1-lesson-new.mathvibe.space/",
+  "homepage": "https://c1-lesson-old.mathvibe.space/",
   "type": "module",
   "scripts": {
     "dev": "vite",
